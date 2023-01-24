@@ -1,0 +1,41 @@
+<%- include('./components/head.ejs'); %>
+
+<%- include('./components/header.ejs'); %>
+
+
+<!-- create a content(table) on /book-list. It does not have icon or click button but it has specific page with correct web-address-->
+
+<main class="container">
+    <div class="row">
+        <div class="offset-md-1.col-md-10">
+            <h1><%= title %></h1>
+            <br>
+            <table class="table table-bordered table-striped table-hover">
+                <!-- header row-->
+                <tr class="d-flex">
+                    <th class="text-center col-2">Name</th>
+                    <th class="text-center col-2">Author</th>
+                    <th class="text-center col-1">Published</th>
+                    <th class="text-center col-6">Description</th>
+                    <th class="text-center col-1">Price</th>
+                </tr>
+
+                <!-- Repeatable Template Row-->
+                <% for(let count =0; count< BookList.length; count++) { %>
+                    <tr class="d-flex">
+                        <td class="text-center col-2"><%= BookList[count].name %></td>
+                        <td class="text-center col-2"><%= BookList[count].author %></td>
+                        <td class="text-center col-1"><%= BookList[count].published %></td>
+                        <td class="text-center col-6"><%= BookList[count].description %></td>
+                        <td class="text-center col-1"><%= BookList[count].price %></td>
+                    </tr>
+                <%} %>
+            </table>
+        </div>
+    </div>
+</main>
+
+<%- include('./components/footer.ejs'); %>
+
+
+<%- include('./components/script.ejs'); %>
