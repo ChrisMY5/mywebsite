@@ -16,9 +16,9 @@ router.get('/home', function(req, res, next) {
 router.get('/about', function(req, res, next) {
   res.render('index', { title: 'About', page: 'about' });
 });
-/* route to call and load 'projects' page. */
-router.get('/projects', function(req, res, next) {
-  res.render('index', { title: 'Projects', page: 'projects' });
+/* route to call and load 'education' page. */
+router.get('/education', function(req, res, next) {
+  res.render('index', { title: 'Education', page: 'education' });
 });
 /* route to call and load 'services' page. */
 router.get('/services', function(req, res, next) {
