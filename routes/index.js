@@ -20,9 +20,9 @@ router.get('/about', function(req, res, next) {
 router.get('/education', function(req, res, next) {
   res.render('index', { title: 'Education', page: 'education' });
 });
-/* route to call and load 'services' page. */
-router.get('/services', function(req, res, next) {
-  res.render('index', { title: 'Services', page: 'services' });
+/* route to call and load 'career' page. */
+router.get('/career', function(req, res, next) {
+  res.render('index', { title: 'Career', page: 'career' });
 });
 /* route to call and load 'contact' page. */
 router.get('/Contact', function(req, res, next) {
